@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yeimi Carreño Studio</title>
+
+  <!-- 🪞 Vista previa al compartir -->
+  <meta property="og:title" content="Yeimi Carreño Studio - Especialista en cejas y pestañas" />
+  <meta property="og:description" content="Las cejas son el marco del rostro. Visítanos en Cra 31A #32-33 Quinta Dania. 🌿✨" />
+  <meta property="og:image" content="https://sweet-kelpie-4f1978.netlify.app/preview.jpg" />
+  <meta property="og:url" content="https://sweet-kelpie-4f1978.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Para WhatsApp, Twitter, etc -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yeimi Carreño Studio" />
+  <meta name="twitter:description" content="Especialista en cejas, pestañas y spa." />
+  <meta name="twitter:image" content="https://sweet-kelpie-4f1978.netlify.app/preview.jpg" />
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <style>
+    <style>
     body {
       margin: 0;
       padding: 0;
@@ -13,10 +28,10 @@
       background-color: #000;
       color: #d4af37;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: flex-start;
-      height: 100vh;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
       background-image: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
@@ -30,11 +45,20 @@
       max-width: 400px;
       background-color: #0a0a0a;
       box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .logo {
-      width: 80px;
+      width: 120px;
       margin-bottom: 15px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
 
     h1 {
@@ -78,6 +102,7 @@
       color: #d4af37;
       text-decoration: none;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -90,35 +115,114 @@
       font-size: 0.8rem;
       color: #777;
     }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #111;
+      border: 1px solid #d4af37;
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .modal-content h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .modal-content p {
+      color: #f5f5f5;
+      margin-bottom: 20px;
+    }
+
+    .close-btn {
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      background-color: #fff;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <!-- Logo tipo ceja dorada -->
-    <svg class="logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 32C20 20 44 20 60 32" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
-      <path d="M8 36C22 26 42 26 56 36" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
-    </svg>
+    <!-- Logo -->
+    <img class="logo" src="./logo1.png" alt="Logo Yeimi Carreño Studio">
 
     <h1>Yeimi Carreño</h1>
     <h2>STUDIO</h2>
 
     <p>Especialista en cejas, pestañas y spa</p>
-    <p class="slogan">“La cejas son el marco de tu rostro”</p>
+    <p class="slogan">“Las cejas son el marco del rostro”</p>
 
     <div class="divider"></div>
 
-    <p>📍 Cra 31A # 32-33, la aurora</p>
-    <p>📞 316 571 9057</p>
-    <p>📸 @yeimicarreño</p>
+    <p>📍 <a href="https://maps.app.goo.gl/hKTE24kr2S1obRoU9" target="_blank" style="color:#d4af37; text-decoration:none;">Cra 31A # 32-33, Quinta Dania</a></p>
+    <p>📞 <a href="tel:+573185059523" style="color:#d4af37; text-decoration:none;">318 505 9523</a></p>
+    <p>📸 <a href="https://www.instagram.com/cejas_yeimi.c" target="_blank" style="color:#d4af37; text-decoration:none;">@cejas_yeimi.c</a></p>
 
     <div class="divider"></div>
 
-    <a href="https://wa.me/573165719057" target="_blank" class="btn">WhatsApp</a>
-    <a href="https://www.instagram.com/yeimicarreño" target="_blank" class="btn">Instagram</a>
+    <a href="https://wa.me/573185059523" target="_blank" class="btn">WhatsApp</a>
+    <a href="https://www.instagram.com/cejas_yeimi.c" target="_blank" class="btn">Instagram</a>
+    <button class="btn" id="openModalBtn">Página Web</button>
 
     <footer>© 2025 Yeimi Carreño Studio</footer>
   </div>
+
+  <!-- Modal -->
+  <div class="modal" id="constructionModal">
+    <div class="modal-content">
+      <h3>✨ Sitio en construcción ✨</h3>
+      <p>Pronto disfrutarás de nuestra web oficial.</p>
+      <button class="close-btn" id="closeModalBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("constructionModal");
+    const openBtn = document.getElementById("openModalBtn");
+    const closeBtn = document.getElementById("closeModalBtn");
+
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
+
 
