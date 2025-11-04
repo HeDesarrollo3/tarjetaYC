@@ -5,29 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yeimi Carreño Studio</title>
 
-  <!-- ✅ Metadatos Open Graph (usados por WhatsApp y Facebook) -->
+  <!-- 🪞 Vista previa al compartir -->
   <meta property="og:title" content="Yeimi Carreño Studio - Especialista en cejas y pestañas" />
   <meta property="og:description" content="Las cejas son el marco del rostro. Visítanos en Calle 31 A # 33 B-50, La Aurora. 🌿✨" />
   <meta property="og:image" content="https://sweet-kelpie-4f1978.netlify.app/preview.jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://sweet-kelpie-4f1978.netlify.app/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Yeimi Carreño Studio" />
   <meta property="og:locale" content="es_CO" />
 
-  <!-- ✅ Metadatos de Twitter -->
+  <!-- Para WhatsApp, Twitter, etc -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Yeimi Carreño Studio" />
   <meta name="twitter:description" content="Especialista en cejas, pestañas y spa." />
   <meta name="twitter:image" content="https://sweet-kelpie-4f1978.netlify.app/preview.jpeg" />
 
-  <!-- ✅ Icono del sitio -->
-  <link rel="icon" type="image/png" href=""./logo1.png"" />
-
-  <!-- ✅ Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <style>
+    <style>
     body {
       margin: 0;
       padding: 0;
@@ -177,6 +170,7 @@
 </head>
 <body>
   <div class="card">
+    <!-- Logo -->
     <img class="logo" src="./logo1.png" alt="Logo Yeimi Carreño Studio">
 
     <h1>Yeimi Carreño</h1>
@@ -187,8 +181,47 @@
 
     <div class="divider"></div>
 
-    <p>📍 <a href="https://maps.app.goo.gl/hKTE24kr2S1obRoU9" target="_blank" style="color:#d4af37; text-decoration:none;">Calle 31A # 33B - 50, La Aurora</a></p>
+    <p>📍 <a href="https://maps.app.goo.gl/hKTE24kr2S1obRoU9" target="_blank" style="color:#d4af37; text-decoration:none;">Cra 31A # 33B - 50, La Aurora</a></p>
+    <p>📞 <a href="tel:+573185059523" style="color:#d4af37; text-decoration:none;">318 505 9523</a></p>
+    <p>📸 <a href="https://www.instagram.com/cejas_yeimi.c" target="_blank" style="color:#d4af37; text-decoration:none;">@cejas_yeimi.c</a></p>
 
+    <div class="divider"></div>
 
+    <a href="https://wa.me/573185059523" target="_blank" class="btn">WhatsApp</a>
+    <a href="https://www.instagram.com/cejas_yeimi.c" target="_blank" class="btn">Instagram</a>
+    <button class="btn" id="openModalBtn">Página Web</button>
 
+    <footer>© 2025 Yeimi Carreño Studio</footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="constructionModal">
+    <div class="modal-content">
+      <h3>✨ Sitio en construcción ✨</h3>
+      <p>Pronto disfrutarás de nuestra web oficial.</p>
+      <button class="close-btn" id="closeModalBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("constructionModal");
+    const openBtn = document.getElementById("openModalBtn");
+    const closeBtn = document.getElementById("closeModalBtn");
+
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
 
